@@ -1,0 +1,160 @@
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #757575;
+    --background-color: #ffffff;
+    --border-color: #e6e6e6;
+    --accent-color: #1a8917;
+}
+
+body {
+    font-family: 'Source Serif Pro', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+
+header {
+    padding: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #146c12;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#newPostForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.form-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+#editor {
+    height: 300px;
+    margin: 1rem 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.post {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.post h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.post-meta {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.post-meta span {
+    margin-right: 1rem;
+}
+
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+#loading {
+    text-align: center;
+    padding: 2rem;
+}
+
+.spinner {
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--accent-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .post h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-container {
+        padding: 1rem;
+    }
+}
